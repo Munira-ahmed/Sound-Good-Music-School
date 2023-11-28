@@ -109,43 +109,43 @@ VALUES
 -- Insert data into the "lesson" table
 INSERT INTO "lesson" ("description", "schedule_id")
 VALUES
-    ('Lesson 1', 6),
-    ('Lesson 2', 7),
-    ('Lesson 4', 9), 
-    ('Lesson 5', 10); 
+    ('Lesson 1', 1),
+    ('Lesson 2', 2),
+    ('Lesson 4', 3), 
+    ('Lesson 5', 4); 
 
 -- Insert data into the "pricing_scheme" table
 INSERT INTO "pricing_scheme" ("lesson_id", "price", "lesson_level", "lesson_type")
 VALUES
-    (11, 30.00, 'beginner', 'individual'), 
-    (12, 40.00, 'intermediate', 'group'), 
-    (13, 25.00, 'beginner', 'individual'),
-    (14, 35.00, 'intermediate', 'group'), 
-    (15, 45.00, 'advanced', 'ensemble');
+    (1, 30.00, 'beginner', 'individual'), 
+    (2, 40.00, 'intermediate', 'group'), 
+    (3, 25.00, 'beginner', 'individual'),
+    (4, 35.00, 'intermediate', 'group'), 
+    (5, 45.00, 'advanced', 'ensemble');
 
 -- Insert data into the "ensembles" table
 INSERT INTO "ensembles" ("lesson_id", "minimum_nr_of_students", "maximum_nr_of_students", "ensemble_genre")
 VALUES
-    (15, 5, 15, 'jazz ensemble'), 
-    (16, 3, 10, 'rock band'),
-    (17, 2, 8, 'folk group'), 
-    (18, 4, 12, 'classical orchestra'), 
-    (19, 6, 18, 'pop ensemble');
+    (1, 5, 15, 'jazz ensemble'), 
+    (2, 3, 10, 'rock band'),
+    (3, 2, 8, 'folk group'), 
+    (4, 4, 12, 'classical orchestra'), 
+    (5, 6, 18, 'pop ensemble');
 
 -- Insert data into the "group_lesson" table
 INSERT INTO "group_lesson" ("lesson_id", "lesson_level", "minimum_nr_of_students", "maximum_nr_of_students", "instrument")
 VALUES
-    (12, 'intermediate', 3, 6, 'guitar'), 
-    (14, 'advanced', 5, 8, 'drums'), 
-    (16, 'beginner', 2, 5, 'violin'),
-    (18, 'intermediate', 4, 10, 'flute'),
-    (20, 'advanced', 6, 12, 'bass'); 
+    (1, 'intermediate', 3, 6, 'guitar'), 
+    (2, 'advanced', 5, 8, 'drums'), 
+    (3, 'beginner', 2, 5, 'violin'),
+    (4, 'intermediate', 4, 10, 'flute'),
+    (5, 'advanced', 6, 12, 'bass'); 
     
 -- Insert data into the "individual_lesson" table
 INSERT INTO "individual_lesson" ("lesson_id", "instrument", "lesson_level")
 VALUES
-    (11, 'piano', 'beginner'), 
-    (13, 'guitar', 'intermediate'), 
-    (15, 'saxophone', 'advanced'),
-    (17, 'piano', 'beginner'), 
-    (19, 'drums', 'intermediate'); 
+    (1, 'piano', 'beginner'), 
+    (2, 'guitar', 'intermediate'), 
+    (3, 'saxophone', 'advanced'),
+    (4, 'piano', 'beginner'), 
+    (5, 'drums', 'intermediate'); 
