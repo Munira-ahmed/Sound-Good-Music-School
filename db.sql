@@ -1,16 +1,16 @@
 -- Insert fake data into the person table
-INSERT INTO person (name, person_number, street, zipcode, city)
+INSERT INTO person (first_name, last_name, person_number, street, zipcode, city)
 VALUES
-  ('Colby Caldwell', 195683306120, '462-2438 Nulla. Road', '54427', 'Boston'),
-  ('Lysandra Oliver', 194932131156, 'Ap #597-8708 Ligula. Rd.', '33436', 'Hartford'),
-  ('Hunter Goodman', 192250765503, 'P.O. Box 677, 6501 Vitae Av.', '37463', 'Pike Creek'),
-  ('Marvin Cash', 195750920971, 'P.O. Box 354, 1714 Augue Ave', '94366', 'Baltimore'),
-  ('Nathaniel Goodwin', 199511029484, 'Ap #125-789 In Av.', '48868', 'Waterbury'),
-  ('Ethan Fitzpatrick', 197805174001, '304-9950 Sollicitudin Street', '47666', 'Hillsboro'),
-  ('Noah Tillman', 192982578269, '483-3216 Vel, Rd.', '99968', 'Gary'),
-  ('Perry Richard', 199869870132, 'Ap #756-9098 Imperdiet Avenue', '22273', 'Butte'),
-  ('Samuel Haney', 191987473648, '6376 Eu Street', '29748', 'Richmond'),
-  ('Amanda Garrison', 195956942364, '429-1258 Non, Road', '83168', 'Austin');
+  ('Colby', 'Caldwell', 195683306120, '462-2438 Nulla. Road', '54427', 'Boston'),
+  ('Lysandra', 'Oliver', 194932131156, 'Ap #597-8708 Ligula. Rd.', '33436', 'Hartford'),
+  ('Hunter', 'Goodman', 192250765503, 'P.O. Box 677, 6501 Vitae Av.', '37463', 'Pike Creek'),
+  ('Marvin', 'Cash', 195750920971, 'P.O. Box 354, 1714 Augue Ave', '94366', 'Baltimore'),
+  ('Nathaniel', 'Goodwin', 199511029484, 'Ap #125-789 In Av.', '48868', 'Waterbury'),
+  ('Ethan', 'Fitzpatrick', 197805174001, '304-9950 Sollicitudin Street', '47666', 'Hillsboro'),
+  ('Noah', 'Tillman', 192982578269, '483-3216 Vel, Rd.', '99968', 'Gary'),
+  ('Perry', 'Richard', 199869870132, 'Ap #756-9098 Imperdiet Avenue', '22273', 'Butte'),
+  ('Samuel', 'Haney', 191987473648, '6376 Eu Street', '29748', 'Richmond'),
+  ('Amanda', 'Garrison', 195956942364, '429-1258 Non, Road', '83168', 'Austin');
 
 -- Insert fake data into the student table
 INSERT INTO student (person_id, student_id, present_skill)
