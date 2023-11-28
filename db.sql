@@ -168,20 +168,3 @@ VALUES
 (34, 'guitar', 1),
 (35, 'jazz', 1);
 
-
-INSERT INTO student_fee (student_id, fee_date, amount, bank_info, status, schedule_id)
-VALUES
-(1231, '2023-11-22 09:00:00', 50.00, 'Bank A', 'Paid', 12),
-(2343, '2023-11-22 11:15:00', 75.00, 'Bank B', 'Pending', 21),
-(3453, '2023-11-22 14:30:00', 100.00, 'Bank C', 'Paid', 32),
-(1232, '2023-11-22 17:45:00', 60.00, 'Bank D', 'Pending', 43),
-(2344, '2023-11-22 20:30:00', 80.00, 'Bank E', 'Paid', 33);
-
--- Insert fake data into the instructor_payment table
-INSERT INTO instructor_payment (instructor_id, payment_date, amount, bank_info, schedule_id)
-VALUES
-(1112, '2023-11-22 09:00:00', 70.00, 'Bank F', 12),
-(2122, '2023-11-22 11:15:00', 90.00, 'Bank G', 21),
-(1212, '2023-11-22 14:30:00', 120.00, 'Bank H', 32),
-(2223, '2023-11-22 17:45:00', 80.00, 'Bank I', 43),
-(4343, '2023-11-22 20:30:00', 100.00, 'Bank J', 33);
