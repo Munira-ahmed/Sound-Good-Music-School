@@ -119,27 +119,6 @@ CREATE TABLE "schedule" (
 );
 
 
-CREATE TABLE "student_fee" (
-   "student_id" INT NOT NULL REFERENCES "student" ON DELETE CASCADE,
-    "fee_date" TIMESTAMP(6),
-    "amount" FLOAT(10),
-    "bank_info" VARCHAR(50),
-    "status" VARCHAR(50),
-    "schedule_id" INT NOT NULL
-);
-
-
-
-CREATE TABLE "instructor_payment" (
-    "instructor_id" INT NOT NULL REFERENCES "instructor" ON DELETE CASCADE, 
-    "payment_date" TIMESTAMP(6),
-    "amount" FLOAT(10),
-    "bank_info" VARCHAR(50),
-    "schedule_id" INT NOT NULL REFERENCES "schedule"
-);
-
-
-
 CREATE TABLE "lesson" (
    "lesson_id" INT GENERATED ALWAYS AS IDENTITY PRIMARY KEY NOT NULL,
    "description" VARCHAR(2000) NOT NULL,
