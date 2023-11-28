@@ -132,6 +132,7 @@ VALUES
     (18, 4, 12, 'classical orchestra'), 
     (19, 6, 18, 'pop ensemble');
 
+<<<<<<< HEAD
 -- Insert data into the "group_lesson" table
 INSERT INTO "group_lesson" ("lesson_id", "lesson_level", "minimum_nr_of_students", "maximum_nr_of_students", "instrument")
 VALUES
@@ -148,3 +149,5 @@ VALUES
     (15, 'saxophone', 'advanced'),
     (17, 'piano', 'beginner'), 
     (19, 'drums', 'intermediate'); 
+=======
+>>>>>>> 729601f89caf7e58cf7cff3717210f80b6ef757f
