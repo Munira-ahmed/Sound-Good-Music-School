@@ -141,6 +141,7 @@ VALUES
     (16, 'beginner', 2, 5, 'violin'),
     (18, 'intermediate', 4, 10, 'flute'),
     (20, 'advanced', 6, 12, 'bass'); 
+    
 -- Insert data into the "individual_lesson" table
 INSERT INTO "individual_lesson" ("lesson_id", "instrument", "lesson_level")
 VALUES
