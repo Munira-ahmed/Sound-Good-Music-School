@@ -37,7 +37,8 @@ CREATE TABLE "level" (
 
 CREATE TABLE "person" (
    "person_id" INT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
-   "name" VARCHAR(300) NOT NULL,
+   "first_name" VARCHAR(300) NOT NULL,
+    "last_name" VARCHAR(300) NOT NULL,
    "person_number" VARCHAR(12) UNIQUE NOT NULL,
    "zipcode" VARCHAR(5) NOT NULL,
    "street" VARCHAR(100) NOT NULL,
