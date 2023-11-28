@@ -96,56 +96,99 @@ VALUES
     (4, 4),
     (5, 1); 
 
---Insert data into the "schedule" table
+-- Insert data into the "schedule" table
 INSERT INTO "schedule" ("instructor_id", "student_id", "start_time", "end_time")
 VALUES
-    (1, 1, '2023-01-01 10:00:00', '2023-01-01 11:00:00'), 
-    (2, 2, '2023-02-01 12:00:00', '2023-02-01 13:00:00'), 
-    (3, 3, '2023-03-01 14:00:00', '2023-03-01 15:00:00'), 
-    (4, 4, '2023-04-01 16:00:00', '2023-04-01 17:00:00'), 
-    (5, 5, '2023-05-01 18:00:00', '2023-05-01 19:00:00'); 
-
+    (1, 1, '2023-01-01 10:00:00', '2023-01-01 11:00:00'),
+    (2, 2, '2023-02-01 12:00:00', '2023-02-01 13:00:00'),
+    (3, 3, '2023-03-01 14:00:00', '2023-03-01 15:00:00'),
+    (4, 4, '2023-04-01 16:00:00', '2023-04-01 17:00:00'),
+    (5, 5, '2023-05-01 18:00:00', '2023-05-01 19:00:00'),
+    -- Add more rows as needed
+    (1, 1, '2023-01-02 10:00:00', '2023-01-02 11:00:00'),
+    (2, 2, '2023-02-02 12:00:00', '2023-02-02 13:00:00'),
+    (3, 3, '2023-03-02 14:00:00', '2023-03-02 15:00:00'),
+    (4, 4, '2023-04-02 16:00:00', '2023-04-02 17:00:00'),
+    (5, 5, '2023-05-02 18:00:00', '2023-05-02 19:00:00'),
+    -- Add more rows as needed
+    (1, 1, '2023-01-03 10:00:00', '2023-01-03 11:00:00'),
+    (2, 2, '2023-02-03 12:00:00', '2023-02-03 13:00:00'),
+    (3, 3, '2023-03-03 14:00:00', '2023-03-03 15:00:00'),
+    (4, 4, '2023-04-03 16:00:00', '2023-04-03 17:00:00'),
+    (5, 5, '2023-05-03 18:00:00', '2023-05-03 19:00:00');
 
 -- Insert data into the "lesson" table
 INSERT INTO "lesson" ("description", "schedule_id")
 VALUES
-    ('Lesson 1', 6),
-    ('Lesson 2', 7),
-    ('Lesson 4', 9), 
-    ('Lesson 5', 10); 
+    ('Lesson 1 - Classroom A', 6),
+    ('Lesson 2 - Classroom B', 7),
+    ('Lesson 3 - Classroom C', 8),
+    ('Lesson 4 - Classroom D', 9),
+    ('Lesson 5 - Classroom E', 10),
+    ('Lesson 1 - Classroom A', 16),
+    ('Lesson 2 - Classroom B', 17),
+    ('Lesson 3 - Classroom C', 18),
+    ('Lesson 4 - Classroom D', 19),
+    ('Lesson 5 - Classroom E', 20),
+    ('Lesson 1 - Classroom A', 21),
+    ('Lesson 2 - Classroom B', 22),
+    ('Lesson 3 - Classroom C', 23),
+    ('Lesson 4 - Classroom D', 24),
+    ('Lesson 5 - Classroom E', 25),
+    ('Lesson 1 - Classroom A', 26),
+    ('Lesson 2 - Classroom B', 27),
+    ('Lesson 3 - Classroom C', 28),
+    ('Lesson 4 - Classroom D', 29),
+    ('Lesson 5 - Classroom E', 30);
 
 -- Insert data into the "pricing_scheme" table
 INSERT INTO "pricing_scheme" ("lesson_id", "price", "lesson_level", "lesson_type")
 VALUES
-    (11, 30.00, 'beginner', 'individual'), 
-    (12, 40.00, 'intermediate', 'group'), 
-    (13, 25.00, 'beginner', 'individual'),
-    (14, 35.00, 'intermediate', 'group'), 
-    (15, 45.00, 'advanced', 'ensemble');
+    (36, 30.00, 'beginner', 'individual'),
+    (37, 40.00, 'intermediate', 'group'),
+    (38, 25.00, 'beginner', 'individual'),
+    (39, 35.00, 'intermediate', 'group'),
+    (40, 45.00, 'advanced', 'ensemble'),
+    (41, 30.00, 'beginner', 'individual'),
+    (42, 40.00, 'intermediate', 'group'),
+    (43, 25.00, 'beginner', 'individual'),
+    (44, 35.00, 'intermediate', 'group'),
+    (45, 45.00, 'advanced', 'ensemble'),
+    (46, 30.00, 'beginner', 'individual'),
+    (47, 40.00, 'intermediate', 'group'),
+    (48, 25.00, 'beginner', 'individual'),
+    (49, 35.00, 'intermediate', 'group'),
+    (50, 45.00, 'advanced', 'ensemble'),
+    (51, 30.00, 'beginner', 'individual'),
+    (52, 40.00, 'intermediate', 'group'),
+    (53, 25.00, 'beginner', 'individual'),
+    (54, 35.00, 'intermediate', 'group'),
+    (55, 45.00, 'advanced', 'ensemble');
 
--- Insert data into the "ensembles" table
+
 INSERT INTO "ensembles" ("lesson_id", "minimum_nr_of_students", "maximum_nr_of_students", "ensemble_genre")
 VALUES
-    (15, 5, 15, 'jazz ensemble'), 
-    (16, 3, 10, 'rock band'),
-    (17, 2, 8, 'folk group'), 
-    (18, 4, 12, 'classical orchestra'), 
-    (19, 6, 18, 'pop ensemble');
+    (40, 5, 15, 'jazz ensemble'),
+    (41, 3, 10, 'rock band'),
+    (42, 2, 8, 'folk group'),
+    (43, 4, 12, 'classical orchestra'),
+    (44, 6, 18, 'pop ensemble'),
+    (45, 5, 15, 'jazz ensemble');
 
 -- Insert data into the "group_lesson" table
 INSERT INTO "group_lesson" ("lesson_id", "lesson_level", "minimum_nr_of_students", "maximum_nr_of_students", "instrument")
 VALUES
-    (12, 'intermediate', 3, 6, 'guitar'), 
-    (14, 'advanced', 5, 8, 'drums'), 
-    (16, 'beginner', 2, 5, 'violin'),
-    (18, 'intermediate', 4, 10, 'flute'),
-    (20, 'advanced', 6, 12, 'bass'); 
+    (46, 'advanced', 6, 12, 'bass'),
+    (47, 'intermediate', 3, 6, 'guitar'),
+    (48, 'advanced', 5, 8, 'drums'),
+    (49, 'beginner', 2, 5, 'violin'),
+    (50, 'intermediate', 4, 10, 'flute');
     
 -- Insert data into the "individual_lesson" table
 INSERT INTO "individual_lesson" ("lesson_id", "instrument", "lesson_level")
 VALUES
-    (11, 'piano', 'beginner'), 
-    (13, 'guitar', 'intermediate'), 
-    (15, 'saxophone', 'advanced'),
-    (17, 'piano', 'beginner'), 
-    (19, 'drums', 'intermediate'); 
+    (51, 'piano', 'beginner'),
+    (52, 'guitar', 'intermediate'),
+    (53, 'saxophone', 'advanced'),
+    (54, 'piano', 'beginner'),
+    (55, 'drums', 'intermediate');

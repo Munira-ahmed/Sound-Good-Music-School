@@ -107,7 +107,7 @@ CREATE TABLE "lesson" (
 
 CREATE TABLE "pricing_scheme" (
     "price_id" INT GENERATED ALWAYS AS IDENTITY PRIMARY KEY NOT NULL,
-    "lesson_id" INT NOT NULL REFERENCES "lesson",
+    "lesson_id" INT NOT NULL REFERENCES "lesson" ON DELETE CASCADE,
     "price" FLOAT(20),
     "lesson_level" "level" NOT NULL,
     "lesson_type" "lesson_type" NOT NULL  
