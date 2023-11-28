@@ -111,8 +111,9 @@ INSERT INTO "lesson" ("description", "schedule_id")
 VALUES
     ('Lesson 1', 1),
     ('Lesson 2', 2),
-    ('Lesson 4', 3), 
-    ('Lesson 5', 4); 
+    ('Lesson 3', 3), 
+    ('Lesson 4', 4); 
+    ('Lesson 5', 5); 
 
 -- Insert data into the "pricing_scheme" table
 INSERT INTO "pricing_scheme" ("lesson_id", "price", "lesson_level", "lesson_type")
