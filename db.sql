@@ -1,187 +1,150 @@
--- Insert fake data into the person table
-INSERT INTO person (first_name, last_name, person_number, street, zipcode, city)
-VALUES
-  ('Colby', 'Caldwell', 195683306120, '462-2438 Nulla. Road', '54427', 'Boston'),
-  ('Lysandra', 'Oliver', 194932131156, 'Ap #597-8708 Ligula. Rd.', '33436', 'Hartford'),
-  ('Hunter', 'Goodman', 192250765503, 'P.O. Box 677, 6501 Vitae Av.', '37463', 'Pike Creek'),
-  ('Marvin', 'Cash', 195750920971, 'P.O. Box 354, 1714 Augue Ave', '94366', 'Baltimore'),
-  ('Nathaniel', 'Goodwin', 199511029484, 'Ap #125-789 In Av.', '48868', 'Waterbury'),
-  ('Ethan', 'Fitzpatrick', 197805174001, '304-9950 Sollicitudin Street', '47666', 'Hillsboro'),
-  ('Noah', 'Tillman', 192982578269, '483-3216 Vel, Rd.', '99968', 'Gary'),
-  ('Perry', 'Richard', 199869870132, 'Ap #756-9098 Imperdiet Avenue', '22273', 'Butte'),
-  ('Samuel', 'Haney', 191987473648, '6376 Eu Street', '29748', 'Richmond'),
-  ('Amanda', 'Garrison', 195956942364, '429-1258 Non, Road', '83168', 'Austin');
 
--- Insert fake data into the student table
-INSERT INTO student (person_id, student_id, present_skill)
-VALUES
-(200303021223, 1231, 'beginner'),
-(200011240101, 2343, 'advanced'),
-(201010101011, 3453, 'intermediate'),
-(199911211912, 2332, 'beginner'),
-(201011110101, 3454, 'intermediate'),
-(200303022123, 1232, 'advanced'),
-(200011240102, 2344, 'beginner');
+-- Insert data into "person" table
+INSERT INTO "person" ("first_name", "last_name", "person_number", "zipcode", "street", "city") VALUES
+('John', 'Doe', '1234567890', '12345', 'Main St', 'New York'),
+('Jane', 'Smith', '0987654321', '54321', 'Broadway', 'Los Angeles'),
+('Bob', 'Johnson', '1112223334', '67890', 'Oak St', 'Chicago'),
+('Alice', 'Williams', '5556667778', '45678', 'Maple St', 'Houston'),
+('Charlie', 'Davis', '9998887776', '98765', 'Pine St', 'Phoenix'),
+('Eva', 'Anderson', '4443332221', '23456', 'Cedar St', 'Philadelphia'),
+('Michael', 'Taylor', '7776665554', '87654', 'Elm St', 'San Antonio'),
+('Sophia', 'Brown', '2223334445', '76543', 'Spruce St', 'San Diego'),
+('David', 'Lee', '8887776667', '34567', 'Cypress St', 'Dallas'),
+('Olivia', 'Moore', '3334445556', '65432', 'Cherry St', 'San Jose');
 
--- Insert fake data into the instructor table
-INSERT INTO instructor (person_id, employment_id)
-VALUES
-(195683306120, 1112),
-(194932131156, 2123),
-(192250765503, 3543),
-(195750920971, 4567),
-(199511029484, 5678),
-(197805174001, 6789),
-(192982578269, 7890),
-(192982578269, 8901),
-(191987473648, 9012);
-
--- Insert fake data into the instrument table
-INSERT INTO instrument (quantity_in_stock, type_id, brand)
-VALUES
-(10, 1, 'Violin'),
-(5, 2, 'Cello'),
-(3, 3, 'Trumpet'),
-(10, 4, 'Guitar'),
-(10, 5, 'Flute'),
-(10, 6, 'Trombone'),
-(10, 7, 'Piano'),
-(10, 8, 'Viola'),
-(10, 9, 'Clarinet'),
-(10, 10, 'Double Bass');
-
--- Insert fake data into the instructor_instrument table
-INSERT INTO instructor_instrument (instructor_id, instrument_id)
-VALUES
-(1112, 1),
-(2123, 2),
-(3543, 3),
-(4567, 4),
-(5678, 5),
-(6789, 6),
-(7890, 7),
-(8901, 8);
-
--- Insert fake data into the rented_instrument table
-INSERT INTO rented_instrument (student_id, instrument_id)
-VALUES
-(1231, 1),
-(2343, 2),
-(3453, 3),
-(1232, 4),
-(2344, 5),
-(3454, 6),
-(1231, 7),
-(2343, 8);
-
--- Insert fake data into the rental table
-INSERT INTO rental (student_id, start_of_rental, end_of_rental, price)
-VALUES
-('2017-01-01 00:00:00', '2017-01-21 13:15:32', 12),
-('2021-04-06 22:25:50', '2022-04-06 22:25:50', 343),
-('2021-04-04 20:18:19', '2022-04-04 20:18:19', 321),
-('2021-08-25 04:19:15', '2022-08-25 04:19:15', 421);
-
--- Insert fake data into the contact_person table
-INSERT INTO contact_person (student_id, name, relation, phone)
-VALUES
-(1231, 'John Doe', 'Mother', '+4917123456789'),
-(2343, 'Jane Doe', 'Father', '+4917213123912'),
-(3453, 'Jack Smith', 'Brother', '+4917312345678'),
-(1232, 'Jill Johnson', 'Sister', '+491748888888');
-
--- Insert fake data into the discount table
-INSERT INTO discount (student_id, siblings_id, discount_percentage)
-VALUES
-(1231, NULL, NULL),
-(2343, NULL, NULL),
-(3453, NULL, NULL),
-(1232, 2121, 15);
-
--- Insert fake data into the phone table
-INSERT INTO phone (phone_number)
-VALUES ('+4917123456789'),
-       ('+4917213123912'),
-       ('+4917312345678'),
-       ('+491748888888');
-
--- Insert fake data into the person_phone table
-INSERT INTO person_phone (phone_id, person_id)
+-- Insert data into the "student" table
+INSERT INTO "student" ("person_id", "student_id", "present_skill")
 VALUES 
-(1, 1231),
-(2, 2343),
-(3, 3453),
-(4, 1232);
+    (1, 'S123456', 'Intermediate'),
+    (2, 'S789012', 'Advanced'),
+    (3, 'S345678', 'Beginner'),
+    (4, 'S987654', 'Intermediate'),
+    (5, 'S543210', 'Advanced');
 
--- Insert fake data into the schedule table
-INSERT INTO schedule (instructor_id, student_id, start_time, end_time)
+-- Insert data into the "instrument" table
+INSERT INTO "instrument" ("quantity_in_stock", "brand", "type_id")
+VALUES 
+    (10, 'Yamaha', 'wind'),
+    (5, 'Fender', 'string'),
+    (8, 'Pearl', 'percussion'),
+    (3, 'Selmer', 'woodwind');
+
+--- Insert data into "contact_person" table
+INSERT INTO "contact_person" ("student_id", "name", "relation", "phone") VALUES
+(1, 'Mary Doe', 'Parent', '111-111-1111'),
+(2, 'Robert Smith', 'Guardian', '222-222-2222'),
+(3, 'Laura Johnson', 'Sibling', '333-333-3333'),
+(4, 'Mark Williams', 'Parent', '444-444-4444'),
+(5, 'Susan Davis', 'Parent', '555-555-5555');
+
+-- Insert data into "discount" table
+INSERT INTO "discount" ("student_id", "siblings_id", "discount_percentage") VALUES
+(1, 'S123456', 15),
+(2, 'S789012', 15),
+(3, 'S345678', 15),
+(4, NULL, 0),
+(5, NULL, 0);
+
+-- Insert data into "phone" table
+INSERT INTO "phone" ("phone_number") VALUES
+('123-456-7890'),
+('987-654-3210'),
+('111-222-3334'),
+('555-666-7778'),
+('999-888-7776');
+-- Insert data into the "instructor" table
+INSERT INTO "instructor" ("person_id", "employment_id")
+VALUES 
+    (6, 'EMP123'),
+    (7, 'EMP456'),
+    (8, 'EMP789'),
+    (9, 'EMP101'),
+    (10, 'EMP112');
+
+INSERT INTO "instructor_instrument" ("instructor_id", "instrument_id")
 VALUES
-(1232, 1111, '2023-11-22 09:00:00', '2023-11-22 10:30:00'),
-(2122, 2222, '2023-11-22 11:15:00', '2023-11-22 12:45:00'),
-(1212, 2111, '2023-11-22 14:30:00', '2023-11-22 16:00:00'),
-(2223, 2211, '2023-11-22 17:45:00', '2023-11-22 19:15:00'),
-(4343, 4332, '2023-11-22 20:30:00', '2023-11-22 22:00:00');
+    (1, 1), 
+    (2, 2), 
+    (3, 3), 
+    (4, 4), 
+    (5, 1); 
 
--- Insert fake data into the lesson table
-INSERT INTO lesson (description, schedule_id)
+
+-- Insert data into the "person_phone" table
+INSERT INTO "person_phone" ("phone_id", "person_id")
+VALUES 
+    (1, 1),
+    (2, 2),
+    (3, 3),
+    (4, 4),
+    (5, 5);
+
+-- Insert data into the "rental" table
+INSERT INTO "rental" ("student_id", "start_of_rental", "end_of_rental", "price")
+VALUES 
+    (1, '2023-01-01', '2023-01-31', 50.00),
+    (2, '2023-02-01', '2023-02-28', 60.00),
+    (3, '2023-03-01', '2023-03-31', 45.00),
+    (4, '2023-04-01', '2023-04-30', 55.00),
+    (5, '2023-05-01', '2023-05-31', 65.00);
+
+INSERT INTO "rented_instrument" ("student_id", "instrument_id")
 VALUES
-('The lesson take place in school classroom 310', 12),
-('The lesson take place in school classroom 311', 21),
-('The lesson take place in school classroom 312', 32),
-('The lesson take place in school classroom 313', 43);
+    (1, 1), 
+    (2, 2), 
+    (3, 3), 
+    (4, 4),
+    (5, 1); 
 
--- Insert fake data into the pricing_scheme table
-INSERT INTO pricing_scheme (lesson_id, price)
+--Insert data into the "schedule" table
+INSERT INTO "schedule" ("instructor_id", "student_id", "start_time", "end_time")
 VALUES
-(12, 10.00),
-(21, 15.00),
-(32, 20.00),
-(43, 15.00);
+    (1, 1, '2023-01-01 10:00:00', '2023-01-01 11:00:00'), 
+    (2, 2, '2023-02-01 12:00:00', '2023-02-01 13:00:00'), 
+    (3, 3, '2023-03-01 14:00:00', '2023-03-01 15:00:00'), 
+    (4, 4, '2023-04-01 16:00:00', '2023-04-01 17:00:00'), 
+    (5, 5, '2023-05-01 18:00:00', '2023-05-01 19:00:00'); 
 
--- Insert fake data into the ensembles table
-INSERT INTO ensembles (lesson_id, minimum_nr_of_students, maximum_nr_of_students, ensemble_genre)
+
+-- Insert data into the "lesson" table
+INSERT INTO "lesson" ("description", "schedule_id")
 VALUES
-(33, 5, 10, 'rock'),
-(34, 5, 10, 'pop'),
-(35, 5, 10, 'jazz'),
-(36, 5, 10, 'classical');
+    ('Lesson 1', 6),
+    ('Lesson 2', 7),
+    ('Lesson 4', 9), 
+    ('Lesson 5', 10); 
 
--- Insert fake data into the group_lesson table
-INSERT INTO group_lesson (lesson_id, lesson_level, minimum_nr_of_students, maximum_nr_of_students, instrument)
+-- Insert data into the "pricing_scheme" table
+INSERT INTO "pricing_scheme" ("lesson_id", "price", "lesson_level", "lesson_type")
 VALUES
-(12, 'beginner', 5, 10, 'piano'),
-(21, 'intermediate', 5, 10, 'guitar'),
-(32, 'advanced', 5, 10, 'violin'),
-(43, 'beginner', 5, 10, 'trumpet'),
-(33, 'beginner', 5, 10, 'piano'),
-(34, 'beginner', 5, 10, 'guitar'),
-(35, 'beginner', 5, 10, 'jazz');
+    (11, 30.00, 'beginner', 'individual'), 
+    (12, 40.00, 'intermediate', 'group'), 
+    (13, 25.00, 'beginner', 'individual'),
+    (14, 35.00, 'intermediate', 'group'), 
+    (15, 45.00, 'advanced', 'ensemble');
 
--- Insert fake data into the individual_lesson table
-INSERT INTO individual_lesson (lesson_id, instrument, level_id)
+-- Insert data into the "ensembles" table
+INSERT INTO "ensembles" ("lesson_id", "minimum_nr_of_students", "maximum_nr_of_students", "ensemble_genre")
 VALUES
-(12, 'piano', 1),
-(21, 'guitar', 2),
-(32, 'violin', 3),
-(43, 'trumpet', 1),
-(33, 'piano', 1),
-(34, 'guitar', 1),
-(35, 'jazz', 1);
+    (15, 5, 15, 'jazz ensemble'), 
+    (16, 3, 10, 'rock band'),
+    (17, 2, 8, 'folk group'), 
+    (18, 4, 12, 'classical orchestra'), 
+    (19, 6, 18, 'pop ensemble');
 
-
-INSERT INTO student_fee (student_id, fee_date, amount, bank_info, status, schedule_id)
+-- Insert data into the "group_lesson" table
+INSERT INTO "group_lesson" ("lesson_id", "lesson_level", "minimum_nr_of_students", "maximum_nr_of_students", "instrument")
 VALUES
-(1231, '2023-11-22 09:00:00', 50.00, 'Bank A', 'Paid', 12),
-(2343, '2023-11-22 11:15:00', 75.00, 'Bank B', 'Pending', 21),
-(3453, '2023-11-22 14:30:00', 100.00, 'Bank C', 'Paid', 32),
-(1232, '2023-11-22 17:45:00', 60.00, 'Bank D', 'Pending', 43),
-(2344, '2023-11-22 20:30:00', 80.00, 'Bank E', 'Paid', 33);
-
--- Insert fake data into the instructor_payment table
-INSERT INTO instructor_payment (instructor_id, payment_date, amount, bank_info, schedule_id)
+    (12, 'intermediate', 3, 6, 'guitar'), 
+    (14, 'advanced', 5, 8, 'drums'), 
+    (16, 'beginner', 2, 5, 'violin'),
+    (18, 'intermediate', 4, 10, 'flute'),
+    (20, 'advanced', 6, 12, 'bass'); 
+-- Insert data into the "individual_lesson" table
+INSERT INTO "individual_lesson" ("lesson_id", "instrument", "lesson_level")
 VALUES
-(1112, '2023-11-22 09:00:00', 70.00, 'Bank F', 12),
-(2122, '2023-11-22 11:15:00', 90.00, 'Bank G', 21),
-(1212, '2023-11-22 14:30:00', 120.00, 'Bank H', 32),
-(2223, '2023-11-22 17:45:00', 80.00, 'Bank I', 43),
-(4343, '2023-11-22 20:30:00', 100.00, 'Bank J', 33);
+    (11, 'piano', 'beginner'), 
+    (13, 'guitar', 'intermediate'), 
+    (15, 'saxophone', 'advanced'),
+    (17, 'piano', 'beginner'), 
+    (19, 'drums', 'intermediate'); 
