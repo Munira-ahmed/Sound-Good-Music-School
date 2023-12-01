@@ -1,5 +1,5 @@
 --classrooms
-INSERT INTO classroom (zip, street, city, seating_capacity)
+INSERT INTO classroom (zip, street, city, seeting_capacity)
 VALUES
   ('27-61', 'Ap #940-7209 Est St.', 'Lewiston', 17),
   ('27-61', 'Ap #940-7209 Est St.', 'Lewiston', 34),
@@ -12,7 +12,7 @@ VALUES
   ('27-61', 'Ap #940-7209 Est St.', 'Lewiston', 15),
   ('27-61', 'Ap #940-7209 Est St.', 'Lewiston', 19);
 
-INSERT INTO classroom (zip, street, city, seating_capacity)
+INSERT INTO classroom (zip, street, city, seeting_capacity)
 VALUES
   ('27-61', 'Ap #940-7209 Est St.', 'Lewiston', 12),
   ('27-61', 'Ap #940-7209 Est St.', 'Lewiston', 23),
