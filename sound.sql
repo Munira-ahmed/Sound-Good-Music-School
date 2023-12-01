@@ -70,7 +70,7 @@ CREATE TABLE student (
  id INT GENERATED ALWAYS AS IDENTITY PRIMARY KEY NOT NULL,
  person_id INT NOT NULL,
  present_skill level NOT NULL,
- siblings_id VARCHAR(10)
+ siblings_id VARCHAR(10),
  FOREIGN KEY (person_id) REFERENCES person (id) ON DELETE CASCADE
 );
 
