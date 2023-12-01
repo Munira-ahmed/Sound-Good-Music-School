@@ -465,32 +465,6 @@ VALUES
   ('Spouse', 139, 69),
   ('Friend', 140, 70);
 
-INSERT INTO instructor_instrument (instructor_id,instrument_id)
-VALUES
-  (22,7),
-  (23,6),
-  (24,9),
-  (25,8),
-  (26,12),
-  (27,13),
-  (28,1),
-  (29,6),
-  (30,4),
-  (31,10);
-INSERT INTO instructor_instrument (instructor_id,instrument_id)
-VALUES
-  (32,5),
-  (33,10),
-  (34,2),
-  (35,4),
-  (36,3),
-  (37,13),
-  (38,6),
-  (39,3),
-  (40,12),
-  (41,11);
-
-
 
 
 INSERT INTO person_phone (phone_id,person_id)
