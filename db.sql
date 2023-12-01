@@ -226,7 +226,7 @@ VALUES
   (150.0, 'intermediate', 'ensemble'),
   (200.0, 'advanced', 'ensemble');
 
-  INSERT INTO skills (person_id, present_skill, siblings_id)
+  INSERT INTO student (person_id, present_skill, siblings_id)
 VALUES
 (21, 'beginner', '6139'),
 (22, 'intermediate', '6138'),
@@ -238,7 +238,7 @@ VALUES
 (28, 'intermediate', '6138'),
 (29, 'advanced', NULL),
 (30, 'beginner', '6139');
-INSERT INTO skills (person_id, present_skill, siblings_id)
+INSERT INTO student (person_id, present_skill, siblings_id)
 VALUES
 (31, 'beginner', NULL),
 (32, 'intermediate', NULL),
@@ -251,7 +251,7 @@ VALUES
 (39, 'advanced', '2134'),
 (40, 'beginner', NULL);
 
-INSERT INTO skills (person_id, present_skill, siblings_id)
+INSERT INTO student (person_id, present_skill, siblings_id)
 VALUES
 (41, 'intermediate', NULL),
 (42, 'advanced', NULL),
@@ -264,7 +264,7 @@ VALUES
 (49, 'beginner', '6578'),
 (50, 'intermediate', '6579');
 
-INSERT INTO skills (person_id, present_skill, siblings_id)
+INSERT INTO student (person_id, present_skill, siblings_id)
 VALUES
 (51, 'advanced', NULL),
 (52, 'beginner', NULL),
@@ -277,7 +277,7 @@ VALUES
 (59, 'intermediate', NULL),
 (60, 'advanced', '1122');
 
-INSERT INTO skills (person_id, present_skill, siblings_id)
+INSERT INTO student (person_id, present_skill, siblings_id)
 VALUES
 (61, 'beginner', NULL),
 (62, 'intermediate', '1122'),
@@ -290,7 +290,7 @@ VALUES
 (69, 'advanced', NULL),
 (70, 'beginner', NULL);
 
-INSERT INTO skills (person_id, present_skill, siblings_id)
+INSERT INTO student (person_id, present_skill, siblings_id)
 VALUES
 (71, 'intermediate', '3122'),
 (72, 'advanced', NULL),
@@ -303,7 +303,7 @@ VALUES
 (79, 'beginner', NULL),
 (80, 'intermediate', NULL);
 
-INSERT INTO skills (person_id, present_skill, siblings_id)
+INSERT INTO student (person_id, present_skill, siblings_id)
 VALUES
 (81, 'advanced', NULL),
 (82, 'beginner', NULL),
