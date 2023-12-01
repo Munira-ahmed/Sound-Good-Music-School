@@ -21,24 +21,6 @@ CREATE TABLE instrument (
  price FLOAT(10)
 );
 
-
-CREATE TABLE rented_instrument (
-    id INT GENERATED ALWAYS AS IDENTITY PRIMARY KEY NOT NULL,
-    instrument_id INT NOT NULL,
-    FOREIGN KEY (instrument_id) REFERENCES instrument (id)
-);
-
-CREATE TABLE instrument_rental (
-    rental_id INT GENERATED ALWAYS AS IDENTITY PRIMARY KEY NOT NULL,
-    rented_instrument_id INT NOT NULL UNIQUE,
-    student_id INT NOT NULL,
-    start_of_rental TIMESTAMP(6) NOT NULL,
-    end_of_rental TIMESTAMP(6) NOT NULL,
-    FOREIGN KEY (rented_instrument_id) REFERENCES rented_instrument (id),
-    FOREIGN KEY (student_id) REFERENCES student (id) ON DELETE CASCADE
-);
-
-
 CREATE TABLE person (
  id INT GENERATED ALWAYS AS IDENTITY PRIMARY KEY  NOT NULL,
  first_name VARCHAR(50) NOT NULL,
@@ -50,19 +32,30 @@ CREATE TABLE person (
 );
 
 
-
 CREATE TABLE phone (
  id INT GENERATED ALWAYS AS IDENTITY PRIMARY KEY NOT NULL,
  phone_number VARCHAR(200) UNIQUE
 );
-
-
 
 CREATE TABLE pricing_Scheme (
  price_id INT GENERATED ALWAYS AS IDENTITY PRIMARY KEY NOT NULL,
  price FLOAT(20),
  lesson_level level,
  lesson_type lesson_type
+);
+
+CREATE TABLE rented_instrument (
+    id INT GENERATED ALWAYS AS IDENTITY PRIMARY KEY NOT NULL,
+    instrument_id INT NOT NULL,
+    FOREIGN KEY (instrument_id) REFERENCES instrument (id)
+);
+
+
+CREATE TABLE school_rules (
+ id INT GENERATED ALWAYS AS IDENTITY PRIMARY KEY NOT NULL,
+ rule_id VARCHAR(10),
+ rule_value VARCHAR(10),
+ rule_description VARCHAR(500)
 );
 
 
@@ -101,7 +94,15 @@ CREATE TABLE instructor_instrument (
 
 );
 
-
+CREATE TABLE instrument_rental (
+    rental_id INT GENERATED ALWAYS AS IDENTITY PRIMARY KEY NOT NULL,
+    rented_instrument_id INT NOT NULL UNIQUE,
+    student_id INT NOT NULL,
+    start_of_rental TIMESTAMP(6) NOT NULL,
+    end_of_rental TIMESTAMP(6) NOT NULL,
+    FOREIGN KEY (rented_instrument_id) REFERENCES rented_instrument (id),
+    FOREIGN KEY (student_id) REFERENCES student (id) ON DELETE CASCADE
+);
 
 
 CREATE TABLE lesson (
