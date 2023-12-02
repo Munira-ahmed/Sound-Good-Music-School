@@ -1,5 +1,7 @@
---Query 1:
+--Query 1: 
+CREATE VIEW lesson_summary AS
 SELECT 
+    EXTRACT(YEAR FROM start_time) AS Year,
     TO_CHAR(start_time, 'Mon') AS Month,
     COUNT(*) AS Total,
     SUM(CASE WHEN price_id BETWEEN 1 AND 3 THEN 1 ELSE 0 END) AS Individual,
@@ -7,18 +9,23 @@ SELECT
     SUM(CASE WHEN price_id BETWEEN 7 AND 9 THEN 1 ELSE 0 END) AS Ensemble
 FROM 
     lesson
-WHERE 
-    EXTRACT(YEAR FROM start_time) = 2024
 GROUP BY 
+    EXTRACT(YEAR FROM start_time),
     TO_CHAR(start_time, 'Mon')
 ORDER BY 
     MIN(start_time);
+
+--to use this query : 
+--select * from lesson_summary;
+--WHERE Year = 2023;
+
 
 --Alternative to use in the where condition : 
 --start_time >= '2024-01-01' AND start_time < '2025-01-01'
 --give the same result. 
 
 --QUERY 2: 
+CREATE VIEW student_siblings_summary AS
 SELECT
     GREATEST(COALESCE(sibling_count, 0) - 1, 0) AS No_of_Siblings,
     COUNT(student.id) AS No_of_Students
@@ -41,6 +48,7 @@ ORDER BY
     No_of_Siblings;
 
 --query 3 :
+CREATE VIEW teacher_lessons AS
 SELECT
     i.id AS "Instructor Id",
     p.first_name AS "First Name",
@@ -77,7 +85,7 @@ ORDER BY
     day_of_week, e.ensamble_genre;
 
 --alternative query 4: 
-
+CREATE VIEW ensemble_availability AS
 SELECT
     TO_CHAR(l.start_time, 'Dy') AS day_of_week,
     e.ensamble_genre,
