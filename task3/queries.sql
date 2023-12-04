@@ -16,7 +16,7 @@ ORDER BY
     MIN(start_time);
 
 --to use this query : 
---select * from lesson_summary;
+--select * from lesson_summary
 --WHERE Year = 2023;
 
 
