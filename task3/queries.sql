@@ -19,11 +19,6 @@ ORDER BY
 --select * from lesson_summary
 --WHERE Year = 2023;
 
-
---Alternative to use in the where condition : 
---start_time >= '2024-01-01' AND start_time < '2025-01-01'
---give the same result. 
-
 --QUERY 2: 
 CREATE VIEW student_siblings_summary AS
 SELECT
@@ -74,7 +69,7 @@ JOIN
 GROUP BY
     i.id, p.first_name, p.last_name
 HAVING
-    COUNT(l.lesson_id) > 1 -- replace :your_specific_number with the desired number
+    COUNT(l.lesson_id) > 1 
 ORDER BY
     COUNT(l.lesson_id) DESC;
 
