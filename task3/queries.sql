@@ -47,6 +47,17 @@ GROUP BY
 ORDER BY
     No_of_Siblings;
 
+--query 2 using subqueries: 
+SELECT
+    GREATEST(COALESCE((SELECT COUNT(*) FROM student WHERE siblings_id = s.siblings_id), 0) - 1, 0) AS No_of_Siblings,
+    COUNT(s.id) AS No_of_Students
+FROM
+    student s
+GROUP BY
+    No_of_Siblings
+ORDER BY
+    No_of_Siblings;
+
 --query 3 :
 CREATE VIEW teacher_lessons AS
 SELECT
